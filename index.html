@@ -1,731 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kenn Errolle Santos | Power BI Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kenn Errolle Santos — Power BI &amp; Reporting Analyst</title>
+<meta name="description" content="Kenn Errolle Santos — Business Intelligence & Reporting Analyst. I build Power BI dashboards and reporting systems that help teams make faster, better decisions."/>
+<meta name="theme-color" content="#0c0c11"/>
+<link rel="canonical" href="https://kenn050902.github.io/kennsantos.github.io/"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png"/>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://kenn050902.github.io/kennsantos.github.io/"/>
+<meta property="og:title" content="Kenn Errolle Santos — Power BI &amp; Reporting Analyst"/>
+<meta property="og:description" content="I build Power BI dashboards and reporting systems that help teams make faster, better decisions."/>
+<meta property="og:image" content="https://kenn050902.github.io/kennsantos.github.io/assets/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Kenn Errolle Santos — Power BI &amp; Reporting Analyst"/>
+<meta name="twitter:description" content="I build Power BI dashboards and reporting systems that help teams make faster, better decisions."/>
+<meta name="twitter:image" content="https://kenn050902.github.io/kennsantos.github.io/assets/og-image.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0c0c11;
+  --surface:#15151c;
+  --text:#f2f2f5;
+  --solid:#f5f5f7;
+  --muted:#a5a5b0;
+  --faint:#86868f;
+  --border:#26262f;
+  --accent:#6366f1;
+  --accent2:#8b5cf6;
+  --accent-soft:rgba(99,102,241,.16);
+  --ring:rgba(99,102,241,.28);
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.disp{font-family:'Plus Jakarta Sans',sans-serif;}
+a{color:inherit;}
+img{display:block;max-width:100%;}
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:#d4d4d8;border-radius:4px;}
 
-    :root {
-      --bg:       #0d1117;
-      --bg2:      #161b22;
-      --bg3:      #21262d;
-      --accent:   #58a6ff;
-      --accent2:  #3fb950;
-      --purple:   #bc8cff;
-      --text:     #e6edf3;
-      --muted:    #8b949e;
-      --border:   #30363d;
-      --glow:     rgba(88,166,255,0.15);
-    }
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(1.5rem,5vw,4.5rem);height:72px;background:rgba(12,12,17,.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);}
+.nav-logo{font-weight:800;font-size:1.05rem;letter-spacing:-.3px;}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;align-items:center;gap:2.1rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .15s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{background:var(--solid);color:var(--bg);padding:.6rem 1.3rem;border-radius:99px;font-size:.85rem;font-weight:600;
+  text-decoration:none;transition:transform .15s,background .15s,color .15s;}
+.nav-cta:hover{background:var(--accent);color:#fff;transform:translateY(-1px);}
+@media (max-width:860px){.nav-links li:not(.nav-cta-item){display:none;}}
 
-    html { scroll-behavior: smooth; }
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1.5rem,5vw,4.5rem);}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+/* HERO */
+#hero{padding:5.5rem 0 4.5rem;}
+.hero-grid{display:grid;grid-template-columns:1.25fr .8fr;gap:3.5rem;align-items:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent-soft);color:var(--accent);
+  border-radius:99px;padding:.4rem 1rem;font-size:.78rem;font-weight:600;letter-spacing:.2px;margin-bottom:1.5rem;}
+.eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.18);}
+h1.hero-h{font-size:clamp(2.1rem,4.4vw,3.4rem);font-weight:800;letter-spacing:-1.4px;line-height:1.08;margin-bottom:1.3rem;}
+h1.hero-h em{font-style:normal;color:var(--accent);}
+.hero-sub{color:var(--muted);font-size:1.05rem;max-width:520px;margin-bottom:2rem;}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.6rem;}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:10px;font-weight:600;
+  font-size:.92rem;text-decoration:none;transition:all .18s;}
+.btn-primary{background:var(--solid);color:var(--bg);}
+.btn-primary:hover{background:var(--accent);color:#fff;transform:translateY(-2px);box-shadow:0 10px 24px var(--ring);}
+.btn-outline{border:1px solid var(--border);color:var(--text);background:var(--surface);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+.hero-trust{display:flex;gap:2.2rem;flex-wrap:wrap;}
+.trust-num{font-weight:800;font-size:1.4rem;font-family:'Plus Jakarta Sans',sans-serif;}
+.trust-lbl{font-size:.76rem;color:var(--faint);margin-top:.1rem;}
+.hero-photo-wrap{position:relative;display:flex;justify-content:center;}
+.hero-photo-ring{width:100%;max-width:320px;aspect-ratio:1;border-radius:24px;padding:5px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));}
+.hero-photo{width:100%;height:100%;border-radius:20px;overflow:hidden;background:var(--surface);}
+.hero-photo img{width:100%;height:100%;object-fit:cover;}
+.hero-badge{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);background:var(--surface);
+  border:1px solid var(--border);border-radius:14px;padding:.7rem 1.1rem;box-shadow:0 12px 30px rgba(0,0,0,.45);
+  display:flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:600;white-space:nowrap;}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;} .hero-photo-wrap{order:-1;} .hero-photo-ring{max-width:200px;}}
 
-    /* ─── SCROLLBAR ─── */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+/* SECTION SHELL */
+section{padding:4.5rem 0;}
+.sec-eyebrow{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.7rem;}
+.sec-title{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:800;letter-spacing:-.7px;margin-bottom:.7rem;}
+.sec-desc{color:var(--muted);max-width:560px;margin-bottom:2.6rem;}
 
-    /* ─── NAV ─── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 clamp(1.5rem, 5vw, 5rem);
-      height: 64px;
-      background: rgba(13,17,23,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-weight: 700; font-size: 1.1rem;
-      color: var(--accent); letter-spacing: -0.3px;
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      color: var(--muted); text-decoration: none; font-size: .9rem;
-      transition: color .2s;
-    }
-    .nav-links a:hover { color: var(--text); }
+/* SERVICES */
+#services{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;}
+.svc-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:1.7rem;transition:all .2s;}
+.svc-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 32px var(--ring);}
+.svc-icon{width:42px;height:42px;border-radius:11px;background:var(--accent-soft);display:flex;align-items:center;
+  justify-content:center;font-size:1.25rem;margin-bottom:1rem;}
+.svc-title{font-weight:700;margin-bottom:.4rem;font-size:.98rem;}
+.svc-desc{color:var(--muted);font-size:.86rem;}
 
-    /* ─── HERO ─── */
-    #hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      padding: 6rem clamp(1.5rem, 5vw, 5rem) 4rem;
-      position: relative; overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: 0; pointer-events: none;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(88,166,255,.12) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 80% 80%, rgba(188,140,255,.08) 0%, transparent 60%);
-    }
-    .hero-grid {
-      position: absolute; inset: 0; pointer-events: none;
-      background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      background-size: 60px 60px; opacity: .25;
-    }
-    .hero-inner {
-      max-width: 900px; text-align: center; position: relative;
-      animation: fadeUp .8s ease both;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 999px; padding: .35rem 1rem;
-      font-size: .8rem; color: var(--accent); margin-bottom: 1.5rem;
-      letter-spacing: .3px;
-    }
-    .hero-badge::before {
-      content: ''; width: 7px; height: 7px; border-radius: 50%;
-      background: var(--accent2);
-      box-shadow: 0 0 6px var(--accent2); animation: pulse 2s infinite;
-    }
-    h1 {
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
-      font-weight: 800; letter-spacing: -1.5px; line-height: 1.1;
-      margin-bottom: 1.2rem;
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-sub {
-      font-size: 1.15rem; color: var(--muted); max-width: 620px;
-      margin: 0 auto 2.5rem;
-    }
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex; align-items: center; gap: .5rem;
-      padding: .75rem 1.8rem; border-radius: 8px;
-      font-size: .95rem; font-weight: 600; cursor: pointer;
-      text-decoration: none; transition: all .2s;
-    }
-    .btn-primary {
-      background: var(--accent); color: #0d1117;
-      box-shadow: 0 0 20px rgba(88,166,255,.35);
-    }
-    .btn-primary:hover {
-      background: #79b8ff;
-      box-shadow: 0 0 30px rgba(88,166,255,.5);
-      transform: translateY(-1px);
-    }
-    .btn-outline {
-      background: transparent; color: var(--text);
-      border: 1px solid var(--border);
-    }
-    .btn-outline:hover {
-      border-color: var(--accent); color: var(--accent);
-      transform: translateY(-1px);
-    }
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;}
+.why-card{padding:1.2rem 0;}
+.why-num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:var(--accent-soft);
+  -webkit-text-stroke:1.4px var(--accent);color:transparent;font-size:1.9rem;margin-bottom:.6rem;display:block;}
+.why-title{font-weight:700;margin-bottom:.4rem;font-size:.96rem;}
+.why-desc{color:var(--muted);font-size:.86rem;}
 
-    /* ─── SECTIONS ─── */
-    section { padding: 5rem clamp(1.5rem, 5vw, 5rem); }
-    .section-inner { max-width: 960px; margin: 0 auto; }
-    .section-label {
-      font-size: .8rem; font-weight: 600; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--accent); margin-bottom: .6rem;
-    }
-    .section-title {
-      font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700;
-      letter-spacing: -0.5px; margin-bottom: .6rem;
-    }
-    .section-desc { color: var(--muted); max-width: 560px; margin-bottom: 3rem; }
+/* EXPERIENCE */
+#experience{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.timeline{position:relative;padding-left:2rem;}
+.timeline::before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--border);}
+.t-item{position:relative;margin-bottom:2rem;}
+.t-item:last-child{margin-bottom:0;}
+.t-dot{position:absolute;left:-2rem;top:4px;width:14px;height:14px;border-radius:50%;background:var(--accent);
+  border:3px solid var(--surface);box-shadow:0 0 0 1px var(--border);}
+.t-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1.7rem;transition:border-color .2s;}
+.t-card:hover{border-color:var(--accent);}
+.t-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.7rem;}
+.t-role{font-weight:700;font-size:1rem;}
+.t-co{color:var(--accent);font-size:.85rem;font-weight:600;margin-top:.1rem;}
+.t-date{background:var(--surface);border:1px solid var(--border);border-radius:99px;padding:.25rem .85rem;
+  font-size:.76rem;color:var(--muted);white-space:nowrap;height:fit-content;}
+.t-list{list-style:none;margin-top:.6rem;}
+.t-list li{color:var(--muted);font-size:.87rem;padding:.28rem 0;padding-left:1.1rem;position:relative;}
+.t-list li::before{content:'';position:absolute;left:0;top:.65rem;width:5px;height:5px;border-radius:50%;background:var(--accent);}
 
-    /* ─── ABOUT ─── */
-    #about { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-    }
-    .about-text p { color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
-    .about-stats {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;
-    }
-    .stat-card {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.2rem; text-align: center;
-      transition: border-color .2s, transform .2s;
-    }
-    .stat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
-    .stat-lbl { font-size: .8rem; color: var(--muted); margin-top: .2rem; }
-    .about-img-wrap {
-      display: flex; justify-content: center; align-items: center;
-    }
-    .about-img-ring {
-      width: 260px; height: 260px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--purple));
-      padding: 3px;
-      box-shadow: 0 0 40px rgba(88,166,255,.25);
-    }
-    .about-img-inner {
-      width: 100%; height: 100%; border-radius: 50%;
-      background: var(--bg3);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 5rem; overflow: hidden;
-    }
-    .about-img-inner img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+/* SKILLS */
+.skill-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.6rem;}
+.skill-group-title{font-weight:700;font-size:.85rem;color:var(--faint);text-transform:uppercase;letter-spacing:.6px;margin-bottom:.9rem;}
+.chip-row{display:flex;flex-wrap:wrap;gap:.55rem;}
+.chip{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.5rem .9rem;font-size:.85rem;
+  font-weight:500;transition:all .15s;}
+.chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);}
 
-    /* ─── SKILLS ─── */
-    .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem;
-    }
-    .skill-card {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.4rem 1.6rem;
-      transition: border-color .2s, transform .2s, box-shadow .2s;
-      position: relative; overflow: hidden;
-    }
-    .skill-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--purple));
-      transform: scaleX(0); transform-origin: left;
-      transition: transform .3s;
-    }
-    .skill-card:hover::before { transform: scaleX(1); }
-    .skill-card:hover {
-      border-color: var(--accent); transform: translateY(-4px);
-      box-shadow: 0 8px 30px var(--glow);
-    }
-    .skill-icon { font-size: 1.6rem; margin-bottom: .7rem; }
-    .skill-name { font-weight: 600; font-size: .95rem; margin-bottom: .3rem; }
-    .skill-desc { font-size: .82rem; color: var(--muted); }
-    .skill-bar-wrap { margin-top: .8rem; background: var(--bg3); border-radius: 99px; height: 4px; }
-    .skill-bar { height: 4px; border-radius: 99px; background: linear-gradient(90deg, var(--accent), var(--purple)); }
+/* EDUCATION */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.1rem;}
+.edu-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.6rem;}
+.edu-degree{font-weight:700;font-size:.92rem;margin-bottom:.3rem;}
+.edu-school{color:var(--muted);font-size:.83rem;}
+.edu-year{color:var(--faint);font-size:.78rem;margin-top:.5rem;}
 
-    /* ─── EXPERIENCE ─── */
-    #experience { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .timeline { position: relative; padding-left: 2rem; }
-    .timeline::before {
-      content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px;
-      width: 2px; background: linear-gradient(to bottom, var(--accent), var(--purple), transparent);
-    }
-    .timeline-item {
-      position: relative; margin-bottom: 2.5rem;
-    }
-    .timeline-dot {
-      position: absolute; left: -2rem; top: 5px;
-      width: 14px; height: 14px; border-radius: 50%;
-      background: var(--accent); border: 2px solid var(--bg2);
-      box-shadow: 0 0 10px rgba(88,166,255,.5);
-    }
-    .timeline-card {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.5rem 1.8rem;
-      transition: border-color .2s, box-shadow .2s;
-    }
-    .timeline-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 20px var(--glow);
-    }
-    .timeline-header {
-      display: flex; justify-content: space-between; align-items: flex-start;
-      flex-wrap: wrap; gap: .5rem; margin-bottom: .8rem;
-    }
-    .timeline-role { font-weight: 700; font-size: 1.05rem; }
-    .timeline-company { color: var(--accent); font-size: .9rem; margin-top: .1rem; }
-    .timeline-date {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 999px; padding: .25rem .85rem;
-      font-size: .78rem; color: var(--muted); white-space: nowrap;
-    }
-    .timeline-list { list-style: none; margin-top: .8rem; }
-    .timeline-list li {
-      color: var(--muted); font-size: .9rem; padding: .3rem 0;
-      display: flex; align-items: flex-start; gap: .6rem;
-    }
-    .timeline-list li::before {
-      content: '▸'; color: var(--accent); flex-shrink: 0; margin-top: .05rem;
-    }
+/* CTA */
+#cta{background:var(--solid);color:var(--bg);border-radius:28px;margin:0 clamp(1.5rem,5vw,4.5rem) 4rem;padding:3.5rem clamp(1.5rem,5vw,3.5rem);
+  text-align:center;position:relative;overflow:hidden;}
+#cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 0%,rgba(99,102,241,.14),transparent 70%);}
+.cta-inner{position:relative;max-width:560px;margin:0 auto;}
+.cta-inner h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;letter-spacing:-.7px;margin-bottom:.8rem;color:var(--bg);}
+.cta-inner p{color:#44444e;margin-bottom:2rem;font-size:.98rem;}
+.cta-btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;}
+.btn-white{background:var(--bg);color:#fff;}
+.btn-white:hover{background:var(--accent);transform:translateY(-2px);}
+.btn-ghost{border:1px solid rgba(11,11,16,.25);color:var(--bg);}
+.btn-ghost:hover{border-color:var(--bg);transform:translateY(-2px);}
 
-    /* ─── PROJECTS / HIGHLIGHTS ─── */
-    .projects-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem;
-    }
-    .project-card {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.8rem;
-      transition: all .25s; position: relative; overflow: hidden;
-    }
-    .project-card::after {
-      content: ''; position: absolute; inset: 0; border-radius: 14px;
-      background: radial-gradient(circle at top left, rgba(88,166,255,.06), transparent 60%);
-      pointer-events: none;
-    }
-    .project-card:hover {
-      border-color: var(--accent); transform: translateY(-5px);
-      box-shadow: 0 12px 40px var(--glow);
-    }
-    .project-icon {
-      width: 46px; height: 46px; border-radius: 10px;
-      background: var(--bg3); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; margin-bottom: 1rem;
-    }
-    .project-title { font-weight: 700; margin-bottom: .5rem; }
-    .project-desc { font-size: .88rem; color: var(--muted); line-height: 1.7; }
-    .project-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
-    .tag {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 6px; padding: .2rem .65rem;
-      font-size: .75rem; color: var(--accent);
-    }
+footer{padding:2.2rem clamp(1.5rem,5vw,4.5rem);text-align:center;color:var(--faint);font-size:.82rem;
+  border-top:1px solid var(--border);}
+footer a{color:var(--muted);text-decoration:none;margin:0 .5rem;}
+footer a:hover{color:var(--accent);}
 
-    /* ─── EDUCATION ─── */
-    #education { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .edu-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem;
-    }
-    .edu-card {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.5rem;
-      transition: border-color .2s, transform .2s;
-    }
-    .edu-card:hover { border-color: var(--purple); transform: translateY(-3px); }
-    .edu-icon { font-size: 1.6rem; margin-bottom: .8rem; }
-    .edu-degree { font-weight: 700; margin-bottom: .3rem; }
-    .edu-school { color: var(--accent); font-size: .9rem; }
-    .edu-year { color: var(--muted); font-size: .82rem; margin-top: .4rem; }
-
-    /* ─── CONTACT ─── */
-    .contact-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;
-    }
-    .contact-card {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.5rem; text-align: center;
-      text-decoration: none; color: var(--text);
-      transition: all .2s;
-    }
-    .contact-card:hover {
-      border-color: var(--accent); transform: translateY(-4px);
-      box-shadow: 0 8px 30px var(--glow);
-      color: var(--accent);
-    }
-    .contact-icon { font-size: 1.8rem; margin-bottom: .7rem; }
-    .contact-label { font-size: .8rem; color: var(--muted); margin-bottom: .3rem; }
-    .contact-val { font-weight: 600; font-size: .9rem; word-break: break-all; }
-
-    /* ─── FOOTER ─── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem clamp(1.5rem, 5vw, 5rem);
-      text-align: center; color: var(--muted); font-size: .85rem;
-      background: var(--bg);
-    }
-    footer span { color: var(--accent); }
-
-    /* ─── ANIMATIONS ─── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; } 50% { opacity: .4; }
-    }
-    .reveal {
-      opacity: 0; transform: translateY(24px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .about-img-wrap { order: -1; }
-      .about-img-ring { width: 180px; height: 180px; }
-      .nav-links { display: none; }
-    }
-  </style>
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">KES</div>
+  <div class="nav-logo">Kenn Santos<span>.</span></div>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="assets/Kenn-Errolle-Santos-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+    <li class="nav-cta-item"><a href="#cta" class="nav-cta">Get in touch</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-inner">
-    <div class="hero-badge">Available for new opportunities</div>
-    <h1>
-      Kenn Errolle Santos<br/>
-      <span class="gradient-text">Power BI Developer</span>
-    </h1>
-    <p class="hero-sub">
-      8+ years turning complex data into actionable insights — specializing in
-      Power BI, SQL, Power Automate, and process optimization at SAP Concur.
-    </p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn btn-primary">
-        ✉ Get In Touch
-      </a>
-      <a href="#experience" class="btn btn-outline">
-        📋 View Experience
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <div class="section-label">About Me</div>
-        <h2 class="section-title">Data-driven & detail-oriented</h2>
-        <p>
-          I'm a Power BI Developer with over 8 years of hands-on experience in invoice processing,
-          data validation, and reporting. I've built dashboards and automated workflows that
-          directly support management decision-making at SAP Concur.
-        </p>
-        <p>
-          My toolkit spans Power BI (Dashboards & DAX), Advanced Excel, SQL, Power Automate,
-          Power Apps, Salesforce, ETL, and SAC. I'm passionate about transforming raw data into
-          clear, actionable insights.
-        </p>
-        <p>
-          Fluent in English and Filipino, I thrive in collaborative environments and bring
-          both technical depth and strong communication skills to every project.
-        </p>
-        <div class="about-stats">
-          <div class="stat-card reveal">
-            <div class="stat-num">8+</div>
-            <div class="stat-lbl">Years Experience</div>
-          </div>
-          <div class="stat-card reveal">
-            <div class="stat-num">3</div>
-            <div class="stat-lbl">Roles at SAP Concur</div>
-          </div>
-          <div class="stat-card reveal">
-            <div class="stat-num">10+</div>
-            <div class="stat-lbl">Tools Mastered</div>
-          </div>
-          <div class="stat-card reveal">
-            <div class="stat-num">100%</div>
-            <div class="stat-lbl">Dedication</div>
-          </div>
+<div class="wrap">
+  <section id="hero">
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">Open to freelance &amp; full-time work</div>
+        <h1 class="hero-h">I turn messy data into <em>dashboards clients trust.</em></h1>
+        <p class="hero-sub">Business Intelligence &amp; Reporting Analyst with 8+ years building Power BI dashboards, validating data, and automating reports that help teams make faster decisions — currently at GO TEAM, previously SAP Concur.</p>
+        <div class="hero-btns">
+          <a href="#experience" class="btn btn-primary">See my work ↓</a>
+          <a href="#cta" class="btn btn-outline">Let's talk</a>
+        </div>
+        <div class="hero-trust">
+          <div><div class="trust-num">8+</div><div class="trust-lbl">Years experience</div></div>
+          <div><div class="trust-num">2</div><div class="trust-lbl">Companies served</div></div>
+          <div><div class="trust-num">9</div><div class="trust-lbl">Core tools</div></div>
+          <div><div class="trust-num">100%</div><div class="trust-lbl">Data accuracy focus</div></div>
         </div>
       </div>
-      <div class="about-img-wrap reveal">
-        <div class="about-img-ring">
-          <div class="about-img-inner"><img src="data:image/jpeg;base64,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" alt="Kenn Errolle Santos" onerror="this.parentElement.innerHTML='👤'"/></div>
+      <div class="hero-photo-wrap reveal">
+        <div class="hero-photo-ring">
+          <div class="hero-photo"><img src="data:image/jpeg;base64,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" alt="Kenn Errolle Santos"/></div>
         </div>
+        <div class="hero-badge"><span class="dot"></span> Available now</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-inner">
-    <div class="section-label reveal">Skills</div>
-    <h2 class="section-title reveal">Technical Expertise</h2>
-    <p class="section-desc reveal">A versatile toolkit built over years of real-world data and analytics work.</p>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-icon">📊</div>
-        <div class="skill-name">Power BI</div>
-        <div class="skill-desc">Dashboards, DAX formulas, and interactive reporting</div>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
+  <section id="services">
+    <div class="sec-eyebrow reveal">What I do</div>
+    <h2 class="sec-title reveal">Services built around your reporting needs</h2>
+    <p class="sec-desc reveal">From first data pull to a dashboard your team actually opens every day.</p>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon">📊</div>
+        <div class="svc-title">Power BI Dashboard Development</div>
+        <div class="svc-desc">Custom dashboards and DAX measures that turn raw data into a clear, interactive story for stakeholders.</div>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🗄️</div>
-        <div class="skill-name">SQL</div>
-        <div class="skill-desc">Data querying, transformation, and database management</div>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">✅</div>
+        <div class="svc-title">Data Validation &amp; Quality</div>
+        <div class="svc-desc">Auditing and reconciling data across sources so leadership can trust every number on the report.</div>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">📗</div>
-        <div class="skill-name">Advanced Excel</div>
-        <div class="skill-desc">Complex formulas, pivot tables, and automated reports</div>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">⚙️</div>
+        <div class="svc-title">Reporting Automation</div>
+        <div class="svc-desc">Power Automate and Excel-based workflows that cut manual report-building down to minutes.</div>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚡</div>
-        <div class="skill-name">Power Automate</div>
-        <div class="skill-desc">Workflow automation and business process integration</div>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🧩</div>
-        <div class="skill-name">Power Apps</div>
-        <div class="skill-desc">Custom low-code business applications</div>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">☁️</div>
-        <div class="skill-name">Salesforce</div>
-        <div class="skill-desc">CRM data management and process optimization</div>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:78%"></div></div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🔄</div>
-        <div class="skill-name">ETL</div>
-        <div class="skill-desc">Extract, Transform, Load pipelines for data integration</div>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:83%"></div></div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">📈</div>
-        <div class="skill-name">Data Analysis & Reporting</div>
-        <div class="skill-desc">Turning raw data into clear, actionable insights</div>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">🔗</div>
+        <div class="svc-title">CRM &amp; Multi-Source Reporting</div>
+        <div class="svc-desc">Salesforce, SQL, and ETL pipelines consolidated into a single reliable reporting layer.</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-inner">
-    <div class="section-label reveal">Work History</div>
-    <h2 class="section-title reveal">Experience</h2>
-    <p class="section-desc reveal">A progressive journey at SAP Concur — from auditor to developer.</p>
+  <section id="why">
+    <div class="sec-eyebrow reveal">Why work with me</div>
+    <h2 class="sec-title reveal">What clients get</h2>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-num">01</span>
+        <div class="why-title">Accuracy first</div>
+        <div class="why-desc">Every dashboard is built on data I've personally validated — no guessing, no silent errors.</div>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-num">02</span>
+        <div class="why-title">Clear communication</div>
+        <div class="why-desc">I translate business questions into reporting requirements, and results back into plain language.</div>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-num">03</span>
+        <div class="why-title">Built to last</div>
+        <div class="why-desc">Reports and automations designed to keep working — and stay easy to maintain — long after handoff.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="sec-eyebrow reveal">Track record</div>
+    <h2 class="sec-title reveal">Where I've delivered results</h2>
+    <p class="sec-desc reveal">A progressive path from invoice auditor to Business Intelligence &amp; Reporting Analyst.</p>
     <div class="timeline">
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Power BI Developer</div>
-              <div class="timeline-company">SAP Concur</div>
-            </div>
-            <div class="timeline-date">2022 – Present</div>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div><div class="t-role">Business Intelligence &amp; Reporting Analyst</div><div class="t-co">GO TEAM</div></div>
+            <div class="t-date">2026 – Present</div>
           </div>
-          <ul class="timeline-list">
-            <li>Develop and maintain operational and performance reports to support management decision-making.</li>
-            <li>Ensure data accuracy and integrity across multiple data sources.</li>
-            <li>Create dashboards and automated reports using Power BI and Excel.</li>
-            <li>Collaborate with stakeholders to identify reporting requirements and process improvements.</li>
+          <ul class="t-list">
+            <li>Developed and maintained Power BI dashboards and automated reports to support business decision-making.</li>
+            <li>Ensured data accuracy and integrity across multiple data sources.</li>
+            <li>Improved reporting efficiency through automation and process optimization.</li>
           </ul>
         </div>
       </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot" style="background:var(--purple); box-shadow:0 0 10px rgba(188,140,255,.5)"></div>
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Subject Matter Expert (SME) Intern</div>
-              <div class="timeline-company">SAP Concur</div>
-            </div>
-            <div class="timeline-date">2022</div>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div><div class="t-role">Reporting Analyst</div><div class="t-co">SAP Concur</div></div>
+            <div class="t-date">2022 – 2026</div>
           </div>
-          <ul class="timeline-list">
-            <li>Assisted in research and development of training materials for invoice processing teams.</li>
-            <li>Supported cross-team process improvement initiatives.</li>
-            <li>Provided functional support and guidance to new team members.</li>
+          <ul class="t-list">
+            <li>Developed and maintained operational and performance reports to support management decision-making.</li>
+            <li>Ensured data accuracy and integrity across multiple data sources.</li>
+            <li>Created dashboards and automated reports using Power BI and Excel.</li>
           </ul>
         </div>
       </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot" style="background:var(--accent2); box-shadow:0 0 10px rgba(63,185,80,.5)"></div>
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Invoice Capture Specialist – Auditor</div>
-              <div class="timeline-company">SAP Concur</div>
-            </div>
-            <div class="timeline-date">2017 – 2022</div>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div><div class="t-role">Invoice Capture Specialist – Auditor</div><div class="t-co">SAP Concur</div></div>
+            <div class="t-date">2017 – 2022</div>
           </div>
-          <ul class="timeline-list">
+          <ul class="t-list">
             <li>Audited and verified vendor invoices, ensuring compliance with client guidelines.</li>
             <li>Maintained productivity and quality logs to track performance.</li>
             <li>Suggested quality and process improvements to reduce recurring errors.</li>
           </ul>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROJECTS / HIGHLIGHTS -->
-<section id="projects">
-  <div class="section-inner">
-    <div class="section-label reveal">Projects</div>
-    <h2 class="section-title reveal">Key Highlights</h2>
-    <p class="section-desc reveal">Notable contributions and initiatives throughout my career.</p>
-    <div class="projects-grid">
-
-      <div class="project-card reveal">
-        <div class="project-icon">📊</div>
-        <div class="project-title">Operational Performance Dashboards</div>
-        <div class="project-desc">
-          Built and maintained comprehensive Power BI dashboards for management reporting,
-          enabling real-time visibility into team performance and KPIs across SAP Concur operations.
-        </div>
-        <div class="project-tags">
-          <span class="tag">Power BI</span>
-          <span class="tag">DAX</span>
-          <span class="tag">Excel</span>
+  <section id="skills">
+    <div class="sec-eyebrow reveal">Toolkit</div>
+    <h2 class="sec-title reveal">Skills &amp; tools</h2>
+    <div class="skill-groups">
+      <div class="reveal">
+        <div class="skill-group-title">Reporting &amp; BI</div>
+        <div class="chip-row">
+          <div class="chip">Power BI (Dashboards, DAX)</div>
+          <div class="chip">Tableau</div>
+          <div class="chip">Advanced Excel</div>
+          <div class="chip">Data Analysis &amp; Reporting</div>
         </div>
       </div>
-
-      <div class="project-card reveal">
-        <div class="project-icon">⚙️</div>
-        <div class="project-title">Automated Reporting Workflows</div>
-        <div class="project-desc">
-          Designed and implemented automated report generation using Power Automate,
-          significantly reducing manual effort and improving data delivery timelines for stakeholders.
-        </div>
-        <div class="project-tags">
-          <span class="tag">Power Automate</span>
-          <span class="tag">Power Apps</span>
-          <span class="tag">SQL</span>
+      <div class="reveal">
+        <div class="skill-group-title">Data &amp; automation</div>
+        <div class="chip-row">
+          <div class="chip">SQL</div>
+          <div class="chip">ETL</div>
+          <div class="chip">SAC</div>
         </div>
       </div>
-
-      <div class="project-card reveal">
-        <div class="project-icon">🔍</div>
-        <div class="project-title">Invoice Audit & Quality System</div>
-        <div class="project-desc">
-          Led quality improvement initiatives for invoice processing, creating tracking logs
-          and identifying systemic errors — resulting in measurable reduction in recurring issues.
-        </div>
-        <div class="project-tags">
-          <span class="tag">Data Validation</span>
-          <span class="tag">Process Optimization</span>
-          <span class="tag">Salesforce</span>
+      <div class="reveal">
+        <div class="skill-group-title">CRM &amp; AI</div>
+        <div class="chip-row">
+          <div class="chip">Salesforce</div>
+          <div class="chip">Claude AI</div>
         </div>
       </div>
-
-      <div class="project-card reveal">
-        <div class="project-icon">📚</div>
-        <div class="project-title">Team Training & Knowledge Base</div>
-        <div class="project-desc">
-          Developed comprehensive training materials for invoice processing teams as SME,
-          standardizing procedures and supporting onboarding of new team members.
-        </div>
-        <div class="project-tags">
-          <span class="tag">SME</span>
-          <span class="tag">Documentation</span>
-          <span class="tag">ETL</span>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-icon">🔗</div>
-        <div class="project-title">Multi-Source Data Integration</div>
-        <div class="project-desc">
-          Ensured data accuracy and integrity by building ETL processes that consolidated
-          data from multiple sources, enabling unified and reliable reporting pipelines.
-        </div>
-        <div class="project-tags">
-          <span class="tag">ETL</span>
-          <span class="tag">SQL</span>
-          <span class="tag">SAC</span>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-icon">🚀</div>
-        <div class="project-title">Stakeholder Analytics Collaboration</div>
-        <div class="project-desc">
-          Partnered with cross-functional stakeholders to define reporting requirements,
-          translating business needs into scalable and insightful Power BI solutions.
-        </div>
-        <div class="project-tags">
-          <span class="tag">Power BI</span>
-          <span class="tag">Stakeholder Mgmt</span>
-          <span class="tag">Analytics</span>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="section-inner">
-    <div class="section-label reveal">Education</div>
-    <h2 class="section-title reveal">Academic Background</h2>
-    <p class="section-desc reveal">Foundation in Information Technology and Communication.</p>
+  <section id="education">
+    <div class="sec-eyebrow reveal">Background</div>
+    <h2 class="sec-title reveal">Education</h2>
     <div class="edu-grid">
       <div class="edu-card reveal">
-        <div class="edu-icon">🎓</div>
         <div class="edu-degree">Bachelor of Science in Information Technology</div>
         <div class="edu-school">International Electronics and Technical Institute (IETI) – Muntinlupa</div>
         <div class="edu-year">2014 – 2016</div>
       </div>
       <div class="edu-card reveal">
-        <div class="edu-icon">📡</div>
         <div class="edu-degree">Information and Communication Technology (ICT)</div>
         <div class="edu-school">International Electronics and Technical Institute (IETI) – Muntinlupa</div>
         <div class="edu-year">2012 – 2014</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner">
-    <div class="section-label reveal">Contact</div>
-    <h2 class="section-title reveal">Let's Connect</h2>
-    <p class="section-desc reveal">Open to new opportunities, collaborations, and conversations about data.</p>
-    <div class="contact-grid">
-      <a href="mailto:kennsantos263@gmail.com" class="contact-card reveal">
-        <div class="contact-icon">✉️</div>
-        <div class="contact-label">Email</div>
-        <div class="contact-val">kennsantos263@gmail.com</div>
-      </a>
-      <a href="tel:09215304886" class="contact-card reveal">
-        <div class="contact-icon">📱</div>
-        <div class="contact-label">Phone</div>
-        <div class="contact-val">+63 921 530 4886</div>
-      </a>
-      <a href="https://www.linkedin.com/in/kenn-santos-09750433a/" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   class="contact-card reveal">
-    <div class="contact-icon">💼</div>
-    <div class="contact-label">LinkedIn</div>
-    <div class="contact-val">linkedin.com/in/kenn-santos-09750433a</div>
-</a>
-      <a class="contact-card reveal" style="cursor:default;">
-        <div class="contact-icon">📍</div>
-        <div class="contact-label">Location</div>
-        <div class="contact-val">291 San Guillermo St, Philippines</div>
-      </a>
+  <section id="cta">
+    <div class="cta-inner reveal">
+      <h2>Have data that needs a story?</h2>
+      <p>Let's turn your spreadsheets into a dashboard your team actually trusts and uses every day.</p>
+      <div class="cta-btns">
+        <a href="mailto:kennsantos263@gmail.com" class="btn btn-white">✉ Email me</a>
+        <a href="assets/Kenn-Errolle-Santos-Resume.pdf" download class="btn btn-ghost">⬇ Download resume</a>
+        <a href="https://www.linkedin.com/in/kenn-santos-09750433a/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Connect on LinkedIn ↗</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
-<!-- FOOTER -->
 <footer>
-  <p>Designed & built for <span>Kenn Errolle Santos</span> · Power BI Developer · © 2026</p>
+  <div>Kenn Errolle Santos · Business Intelligence &amp; Reporting Analyst</div>
+  <div style="margin-top:.6rem;">
+    <a href="mailto:kennsantos263@gmail.com">kennsantos263@gmail.com</a>·
+    <a href="tel:09215304886">+63 921 530 4886</a>·
+    <a href="https://www.linkedin.com/in/kenn-santos-09750433a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <div style="margin-top:1rem;color:var(--faint);">© 2026</div>
 </footer>
 
 <script>
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -734,12 +392,9 @@
   }, { threshold: 0.12 });
   reveals.forEach(el => io.observe(el));
 
-  // Stagger children in grids
-  document.querySelectorAll('.skills-grid, .projects-grid, .contact-grid, .edu-grid, .about-stats')
+  document.querySelectorAll('.svc-grid, .why-grid, .edu-grid, .chip-row, .hero-trust')
     .forEach(grid => {
-      [...grid.children].forEach((child, i) => {
-        child.style.transitionDelay = `${i * 80}ms`;
-      });
+      [...grid.children].forEach((child, i) => { child.style.transitionDelay = (i * 70) + 'ms'; });
     });
 </script>
 </body>
