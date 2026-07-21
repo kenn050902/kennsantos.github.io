@@ -126,6 +126,35 @@ section{padding:4.5rem 0;}
   background:var(--bg);margin-bottom:1.1rem;display:block;}
 .proj-foot{margin-top:auto;padding-top:.9rem;border-top:1px solid var(--border);font-size:.76rem;color:var(--faint);}
 
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.4rem;}
+.process-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:1.6rem;transition:all .2s;}
+.process-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 32px var(--ring);}
+.process-num{width:32px;height:32px;border-radius:9px;background:var(--accent-soft);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;margin-bottom:1rem;
+  font-family:'Plus Jakarta Sans',sans-serif;}
+.process-title{font-weight:700;font-size:.96rem;margin-bottom:.4rem;}
+.process-desc{color:var(--muted);font-size:.85rem;}
+
+/* PRICING */
+#pricing{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;align-items:stretch;}
+.price-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:1.8rem;
+  display:flex;flex-direction:column;position:relative;transition:all .2s;}
+.price-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px var(--ring);}
+.price-card.featured{border:2px solid var(--accent);}
+.price-card:not(.featured){border:1px solid var(--border);}
+.price-badge{position:absolute;top:-12px;left:1.8rem;background:var(--accent);color:#fff;font-size:.7rem;font-weight:700;
+  padding:.3rem .8rem;border-radius:99px;letter-spacing:.3px;}
+.price-tier{font-weight:700;font-size:1rem;margin-bottom:.5rem;}
+.price-amt{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.7rem;margin-bottom:.2rem;}
+.price-amt span{font-size:.8rem;color:var(--faint);font-weight:500;}
+.price-turn{color:var(--faint);font-size:.76rem;margin-bottom:1.3rem;padding-bottom:1.3rem;border-bottom:1px solid var(--border);}
+.price-feat{list-style:none;margin-bottom:1.4rem;flex-grow:1;}
+.price-feat li{color:var(--muted);font-size:.85rem;padding:.4rem 0;padding-left:1.3rem;position:relative;}
+.price-feat li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700;}
+.price-note{color:var(--faint);font-size:.78rem;text-align:center;margin-top:.5rem;}
+
 /* WHY */
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;}
 .why-card{padding:1.2rem 0;}
@@ -197,6 +226,7 @@ footer a:hover{color:var(--accent);}
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
@@ -308,6 +338,78 @@ footer a:hover{color:var(--accent);}
         <div class="proj-foot">Power BI · Live file available on request</div>
       </div>
     </div>
+  </section>
+
+  <section id="process">
+    <div class="sec-eyebrow reveal">How it works</div>
+    <h2 class="sec-title reveal">From first call to finished dashboard</h2>
+    <p class="sec-desc reveal">A straightforward process, whether it's a single report or a full reporting system.</p>
+    <div class="process-grid">
+      <div class="process-card reveal">
+        <div class="process-num">01</div>
+        <div class="process-title">Discovery call</div>
+        <div class="process-desc">15-30 min to understand your data, your stakeholders, and what "done" looks like. Free, no obligation.</div>
+      </div>
+      <div class="process-card reveal">
+        <div class="process-num">02</div>
+        <div class="process-title">Data audit &amp; scope</div>
+        <div class="process-desc">I review your sources, flag data quality issues up front, and send a fixed-scope proposal with timeline.</div>
+      </div>
+      <div class="process-card reveal">
+        <div class="process-num">03</div>
+        <div class="process-title">Build &amp; review</div>
+        <div class="process-desc">Data model, DAX measures, and report build — with a check-in partway through so there are no surprises.</div>
+      </div>
+      <div class="process-card reveal">
+        <div class="process-num">04</div>
+        <div class="process-title">Handoff &amp; training</div>
+        <div class="process-desc">Walkthrough for your team, documentation, and a short support window to fix anything that comes up.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="sec-eyebrow reveal">Investment</div>
+    <h2 class="sec-title reveal">Simple, project-based pricing</h2>
+    <p class="sec-desc reveal">Every engagement is scoped individually — these are starting points to set expectations, not final quotes.</p>
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <div class="price-tier">Dashboard audit &amp; refresh</div>
+        <div class="price-amt">$250<span> starting</span></div>
+        <div class="price-turn">Typical turnaround: 3-5 days</div>
+        <ul class="price-feat">
+          <li>Review of an existing report</li>
+          <li>Data validation &amp; error fixes</li>
+          <li>DAX and performance cleanup</li>
+          <li>Visual &amp; layout polish</li>
+        </ul>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="price-badge">Most requested</div>
+        <div class="price-tier">New dashboard build</div>
+        <div class="price-amt">$650<span> starting</span></div>
+        <div class="price-turn">Typical turnaround: 1-2 weeks</div>
+        <ul class="price-feat">
+          <li>Single data source connection</li>
+          <li>Data model &amp; DAX measures</li>
+          <li>One polished, interactive report</li>
+          <li>Drill-through &amp; mobile layout</li>
+          <li>Team walkthrough included</li>
+        </ul>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-tier">Full reporting system</div>
+        <div class="price-amt">$1,500<span> starting</span></div>
+        <div class="price-turn">Typical turnaround: 3-4 weeks</div>
+        <ul class="price-feat">
+          <li>Multi-source ETL &amp; data model</li>
+          <li>Star schema, RLS, scheduled refresh</li>
+          <li>Multiple report pages</li>
+          <li>Documentation &amp; team training</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note">Final quote depends on data sources, complexity, and refresh needs — the discovery call is free.</p>
   </section>
 
   <section id="why">
@@ -462,7 +564,7 @@ footer a:hover{color:var(--accent);}
   }, { threshold: 0.12 });
   reveals.forEach(el => io.observe(el));
 
-  document.querySelectorAll('.svc-grid, .why-grid, .edu-grid, .chip-row, .hero-trust, .proj-grid')
+  document.querySelectorAll('.svc-grid, .why-grid, .edu-grid, .chip-row, .hero-trust, .proj-grid, .process-grid, .price-grid')
     .forEach(grid => {
       [...grid.children].forEach((child, i) => { child.style.transitionDelay = (i * 70) + 'ms'; });
     });
