@@ -107,6 +107,25 @@ section{padding:4.5rem 0;}
 .svc-title{font-weight:700;margin-bottom:.4rem;font-size:.98rem;}
 .svc-desc{color:var(--muted);font-size:.86rem;}
 
+/* PROJECTS */
+#projects{}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem;}
+.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.8rem;
+  display:flex;flex-direction:column;transition:all .2s;}
+.proj-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 32px var(--ring);}
+.proj-tag{display:inline-flex;align-self:flex-start;background:var(--accent-soft);color:var(--accent);
+  border-radius:99px;padding:.3rem .8rem;font-size:.72rem;font-weight:700;letter-spacing:.3px;
+  text-transform:uppercase;margin-bottom:1rem;}
+.proj-title{font-weight:700;font-size:1.05rem;margin-bottom:.5rem;}
+.proj-desc{color:var(--muted);font-size:.87rem;margin-bottom:1rem;flex-grow:1;}
+.proj-meta{color:var(--faint);font-size:.78rem;margin-bottom:1rem;}
+.proj-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:0;}
+.proj-chip{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:.3rem .6rem;
+  font-size:.74rem;color:var(--muted);}
+.proj-thumb{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;border:1px solid var(--border);
+  background:var(--bg);margin-bottom:1.1rem;display:block;}
+.proj-foot{margin-top:auto;padding-top:.9rem;border-top:1px solid var(--border);font-size:.76rem;color:var(--faint);}
+
 /* WHY */
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;}
 .why-card{padding:1.2rem 0;}
@@ -177,6 +196,7 @@ footer a:hover{color:var(--accent);}
   <div class="nav-logo">Kenn Santos<span>.</span></div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
@@ -193,7 +213,7 @@ footer a:hover{color:var(--accent);}
         <h1 class="hero-h">I turn messy data into <em>dashboards clients trust.</em></h1>
         <p class="hero-sub">Business Intelligence &amp; Reporting Analyst with 8+ years building Power BI dashboards, validating data, and automating reports that help teams make faster decisions — currently at GO TEAM, previously SAP Concur.</p>
         <div class="hero-btns">
-          <a href="#experience" class="btn btn-primary">See my work ↓</a>
+          <a href="#projects" class="btn btn-primary">See my work ↓</a>
           <a href="#cta" class="btn btn-outline">Let's talk</a>
         </div>
         <div class="hero-trust">
@@ -236,6 +256,56 @@ footer a:hover{color:var(--accent);}
         <div class="svc-icon">🔗</div>
         <div class="svc-title">CRM &amp; Multi-Source Reporting</div>
         <div class="svc-desc">Salesforce, SQL, and ETL pipelines consolidated into a single reliable reporting layer.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-eyebrow reveal">Portfolio</div>
+    <h2 class="sec-title reveal">Selected Power BI work</h2>
+    <p class="sec-desc reveal">A sample of dashboards I've built end-to-end — data modeling, DAX measures, and the final report layout. Full interactive files are available for a live walkthrough on request.</p>
+    <div class="proj-grid">
+      <div class="proj-card reveal">
+        <img class="proj-thumb" src="assets/projects/hr-analytics-preview.png" alt="HR Analytics Dashboard preview — Power BI report layout"/>
+        <div class="proj-tag">HR Analytics</div>
+        <div class="proj-title">HR Analytics Dashboard</div>
+        <div class="proj-desc">Workforce headcount dashboard for HR stakeholders — tracks employee counts by gender, tenure, and job level, with dedicated pages to flag promotion and layoff risk.</div>
+        <div class="proj-meta">3 pages · Summary, Details, Action</div>
+        <div class="proj-chips">
+          <span class="proj-chip">Power BI</span>
+          <span class="proj-chip">DAX</span>
+          <span class="proj-chip">Data Modeling</span>
+          <span class="proj-chip">Headcount Analytics</span>
+        </div>
+        <div class="proj-foot">Power BI · Live file available on request</div>
+      </div>
+      <div class="proj-card reveal">
+        <img class="proj-thumb" src="assets/projects/payroll-preview.png" alt="Payroll Performance Dashboard preview — Power BI report layout"/>
+        <div class="proj-tag">Payroll Operations</div>
+        <div class="proj-title">Payroll Performance Dashboard</div>
+        <div class="proj-desc">Operational dashboard for a payroll processing team — monitors CSR workload, processing/pending rates, and turnaround-time health across regions, locations, and pay frequencies.</div>
+        <div class="proj-meta">Key measures: Processing Rate %, CSR-to-Client Ratio, Avg. Days Between, Total Scheduled Payrolls</div>
+        <div class="proj-chips">
+          <span class="proj-chip">Power BI</span>
+          <span class="proj-chip">DAX</span>
+          <span class="proj-chip">Star Schema</span>
+          <span class="proj-chip">Ops Reporting</span>
+        </div>
+        <div class="proj-foot">Power BI · Live file available on request</div>
+      </div>
+      <div class="proj-card reveal">
+        <img class="proj-thumb" src="assets/projects/sales-preview.png" alt="Sales Performance Report preview — Power BI report layout"/>
+        <div class="proj-tag">Sales Analytics</div>
+        <div class="proj-title">Sales Performance Report</div>
+        <div class="proj-desc">Revenue and profitability dashboard analyzing sales, gross margin, and YoY growth across products, customers, resellers, and territories.</div>
+        <div class="proj-meta">Key measures: Total Sales, Gross Profit %, YoY Revenue Growth %, Units Sold</div>
+        <div class="proj-chips">
+          <span class="proj-chip">Power BI</span>
+          <span class="proj-chip">DAX</span>
+          <span class="proj-chip">Data Modeling</span>
+          <span class="proj-chip">Sales &amp; Margin</span>
+        </div>
+        <div class="proj-foot">Power BI · Live file available on request</div>
       </div>
     </div>
   </section>
@@ -392,7 +462,7 @@ footer a:hover{color:var(--accent);}
   }, { threshold: 0.12 });
   reveals.forEach(el => io.observe(el));
 
-  document.querySelectorAll('.svc-grid, .why-grid, .edu-grid, .chip-row, .hero-trust')
+  document.querySelectorAll('.svc-grid, .why-grid, .edu-grid, .chip-row, .hero-trust, .proj-grid')
     .forEach(grid => {
       [...grid.children].forEach((child, i) => { child.style.transitionDelay = (i * 70) + 'ms'; });
     });
