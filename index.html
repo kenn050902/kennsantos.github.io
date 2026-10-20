@@ -120,6 +120,15 @@
     .service-icon { display: grid; place-items: center; width: 45px; height: 45px; margin-bottom: 1.2rem; border: 1px solid rgba(110,231,216,.2); border-radius: 13px; background: rgba(110,231,216,.07); color: var(--accent); font-size: 1.1rem; font-weight: 800; }
     .service-card p { font-size: .9rem; margin-bottom: 0; }
     .projects-section { background: rgba(255,255,255,.018); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .fit-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; margin-top: 2rem; }
+    .fit-card { padding: 1.35rem; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.025); }
+    .fit-card .fit-number { color: var(--accent); font-size: .72rem; font-weight: 800; letter-spacing: .12em; margin-bottom: .8rem; }
+    .fit-card h3 { margin-bottom: .5rem; font-size: 1.05rem; }
+    .fit-card p { margin: 0; color: var(--muted); font-size: .88rem; }
+    .case-note { margin-top: 1rem; padding: .9rem; border-left: 2px solid var(--accent); background: rgba(110,231,216,.045); border-radius: 0 8px 8px 0; }
+    .case-note strong { display: block; margin-bottom: .3rem; color: var(--text); font-size: .76rem; letter-spacing: .03em; }
+    .case-note p { margin: 0; font-size: .82rem; }
+
     .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.15rem; }
     .project-card { overflow: hidden; transition: transform .2s, border-color .2s; }
     .project-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--bg-2); border-bottom: 1px solid var(--line); }
@@ -196,7 +205,8 @@
       .trust-grid { grid-template-columns: repeat(2, 1fr); }
       .trust-item:nth-child(2) { border-right: 0; }
       .trust-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .projects-grid, .engagement-grid, .skills-grid { grid-template-columns: 1fr; }
+      .projects-grid, .engagement-grid, .skills-grid, .fit-grid { grid-template-columns: 1fr; }
+      .fit-grid { gap: .75rem; }
       .projects-grid .project-card:last-child { grid-column: auto; max-width: none; }
       .timeline-top { flex-direction: column; gap: .25rem; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
@@ -317,6 +327,33 @@
       </div>
     </section>
 
+    <section id="fit">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">A good fit if...</div>
+          <h2>Your reporting should answer questions—not create more work.</h2>
+          <p>I’m most useful when a team has data available but needs a clearer, more dependable way to turn it into decisions.</p>
+        </div>
+        <div class="fit-grid">
+          <article class="fit-card">
+            <div class="fit-number">01 / MANUAL REPORTING</div>
+            <h3>Monthly reporting takes too long</h3>
+            <p>Bring recurring files and repeatable steps into a more consistent reporting workflow, with agreed checks before results are shared.</p>
+          </article>
+          <article class="fit-card">
+            <div class="fit-number">02 / TRUST IN THE NUMBERS</div>
+            <h3>KPIs don’t line up</h3>
+            <p>Review measure definitions, transformation logic, and report calculations so stakeholders can work from a shared view of performance.</p>
+          </article>
+          <article class="fit-card">
+            <div class="fit-number">03 / LIMITED VISIBILITY</div>
+            <h3>Leaders need a clearer picture</h3>
+            <p>Build decision-focused dashboards that surface trends, exceptions, and performance differences without burying the audience in detail.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="projects-section" id="work">
       <div class="container">
         <div class="section-head">
@@ -336,6 +373,8 @@
                 <li>Support exploration by relevant employee dimensions</li>
                 <li>Separate summary insights from detailed views</li>
               </ul>
+              <div class="case-note"><strong>Business question</strong><p>Where are workforce patterns changing, and which groups should HR explore more closely?</p></div>
+              <div class="case-note"><strong>What this concept demonstrates</strong><p>A KPI overview, consistent employee dimensions, and a path from summary trends to supporting detail.</p></div>
               <div class="tech-list"><span>Power BI</span><span>DAX</span><span>Data modeling</span></div>
             </div>
           </article>
@@ -350,6 +389,8 @@
                 <li>Explore workload by location or pay frequency</li>
                 <li>Highlight measures that may need follow-up</li>
               </ul>
+              <div class="case-note"><strong>Business question</strong><p>Which payroll runs are pending or taking longer than expected, and where is follow-up needed?</p></div>
+              <div class="case-note"><strong>What this concept demonstrates</strong><p>Workload and status monitoring, turnaround-time indicators, and views that help operations teams prioritize review.</p></div>
               <div class="tech-list"><span>Power BI</span><span>DAX</span><span>Operational KPIs</span></div>
             </div>
           </article>
@@ -364,6 +405,8 @@
                 <li>Review trends across business dimensions</li>
                 <li>Present summary metrics with drill-down context</li>
               </ul>
+              <div class="case-note"><strong>Business question</strong><p>What is driving changes in sales and profitability across products, periods, and territories?</p></div>
+              <div class="case-note"><strong>What this concept demonstrates</strong><p>Comparative KPIs, time-based trends, and drill-down context for investigating business performance.</p></div>
               <div class="tech-list"><span>Power BI</span><span>DAX</span><span>Sales analytics</span></div>
             </div>
           </article>
@@ -502,7 +545,7 @@
           <h2>Let's make your next business decision clearer.</h2>
           <p>Tell me what you are trying to understand, where your data lives, and what is difficult about your current reporting. We can determine whether a focused project or ongoing support makes sense.</p>
           <div class="cta-actions">
-            <a class="btn btn-primary" href="mailto:kennsantos263@gmail.com?subject=Analytics%20project%20inquiry">Email about a project ↗</a>
+            <a class="btn btn-primary" href="mailto:kennsantos263@gmail.com?subject=Analytics%20project%20inquiry&body=Hi%20Kenn%2C%0A%0AI%27m%20looking%20for%20help%20with%20a%20reporting%20or%20analytics%20project.%0A%0ABusiness%20problem%3A%20%0ACurrent%20data%20sources%3A%20%0ADesired%20deliverable%3A%20%0ATimeline%3A%20%0A%0AThank%20you.">Email about a project ↗</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/kenn-santos-09750433a/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
             <a class="btn btn-secondary" href="assets/Kenn-Errolle-Santos-Resume.pdf" target="_blank" rel="noopener noreferrer">View resume ↗</a>
           </div>
