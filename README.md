@@ -4,7 +4,7 @@ A responsive personal portfolio website for Kenn Errolle Santos, focused on busi
 
 **Live website:** https://kenn050902.github.io/kennsantos.github.io/  
 **GitHub profile:** https://github.com/kenn050902  
-**LinkedIn:** https://www.linkedin.com/in/kenn-santos-09750433a/
+**LinkedIn:** https://www.linkedin.com/in/kenn-errolle-santos-09750433a/
 
 ## Overview
 
