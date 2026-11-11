@@ -35,6 +35,19 @@ No JavaScript framework, package manager, or build step is required.
 .
 ├── index.html
 ├── assets/
+│   ├── skills/
+│   │   ├── power-bi.png
+│   │   ├── salesforce.png
+│   │   ├── sql-server.png
+│   │   ├── power-query.png
+│   │   ├── excel.png
+│   │   ├── power-automate.png
+│   │   ├── power-apps.png
+│   │   ├── sharepoint.png
+│   │   ├── sap.png
+│   │   ├── tableau.png
+│   │   ├── python.png
+│   │   └── openai.png
 │   ├── Kenn-Errolle-Santos-Resume.pdf
 │   ├── favicon-32.png
 │   ├── favicon-512.png
@@ -48,6 +61,8 @@ No JavaScript framework, package manager, or build step is required.
 ```
 
 Keep the existing `assets/` files and paths intact when replacing `index.html`, unless you also update their references in the page.
+
+The Technical Capabilities cards use the local PNG files in `assets/skills/`. Replace a PNG with the same filename to update that skill image, or update the corresponding `src` in `index.html`.
 
 ## Run locally
 
