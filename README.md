@@ -13,7 +13,7 @@ The site is designed to help prospective employers and freelance clients underst
 ### Featured areas
 
 - **Services:** Power BI dashboard development, reporting improvement, data preparation and SQL, and workflow automation.
-- **Selected work:** HR analytics, payroll operations, and sales performance dashboard examples.
+- **Work samples:** Sales, HR Analytics, and Payroll Performance reports with page switching and enlarged image views.
 - **Approach:** Discovery, data review and scoping, build and validation, and handoff.
 - **Experience:** Business intelligence/reporting and operational auditing background.
 - **Tools:** Power BI, DAX, Power Query, SQL, Excel, SAP Analytics Cloud, Tableau, Power Automate, Power Apps, SharePoint, and Salesforce.
@@ -23,7 +23,7 @@ The site is designed to help prospective employers and freelance clients underst
 
 - HTML5
 - CSS3 (custom properties, Grid, Flexbox, responsive breakpoints)
-- Vanilla JavaScript for the mobile navigation and dynamic copyright year
+- Vanilla JavaScript for mobile navigation, report/page switching, enlarged report views, and the copyright year
 - Google Fonts: Manrope and DM Sans
 - GitHub Pages for hosting
 
@@ -55,8 +55,11 @@ No JavaScript framework, package manager, or build step is required.
 │   ├── og-image.png
 │   └── projects/
 │       ├── hr-analytics-preview.png
+│       ├── hr-analytics-details.png
+│       ├── hr-analytics-actions.png
 │       ├── payroll-preview.png
-│       └── sales-preview.png
+│       ├── sales-preview.png
+│       └── sales-details.png
 └── README.md
 ```
 
