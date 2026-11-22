@@ -1,6 +1,6 @@
-# Kenn Santos — Business Intelligence & Reporting Portfolio
+# Kenn Santos — Business Intelligence & Reporting Consultant
 
-A responsive personal portfolio website for Kenn Errolle Santos, focused on business intelligence, Power BI reporting, analytics, and workflow automation.
+A responsive consulting portfolio for Kenn Errolle Santos, focused on helping small and medium-sized businesses turn scattered data into reliable reporting, clear performance insights, and better business decisions.
 
 **Live website:** https://kenn050902.github.io/kennsantos.github.io/  
 **GitHub profile:** https://github.com/kenn050902  
@@ -8,16 +8,17 @@ A responsive personal portfolio website for Kenn Errolle Santos, focused on busi
 
 ## Overview
 
-The site is designed to help prospective employers and freelance clients understand Kenn's reporting experience, technical capabilities, and the types of analytics projects he can support.
+The site presents three service areas: Standard Reporting Solutions, Customized Business Intelligence Solutions, and Reporting Automation & Support. It also highlights Kenn's actual reporting experience, tools, credentials, and contact details.
 
 ### Featured areas
 
-- **Services:** Power BI dashboard development, reporting improvement, data preparation and SQL, and workflow automation.
-- **Work samples:** Sales, HR Analytics, and Payroll Performance reports with page switching and enlarged image views.
+- **Services:** Standard reporting, customized business intelligence, and reporting automation and support.
+- **Demonstration projects:** BPO Operations & Productivity, Ecommerce Business Performance, and Logistics Performance dashboard concepts. Every metric and insight in these previews uses fictional demonstration data; they are not client engagements.
+- **Additional work samples:** Sales, HR Analytics, and Payroll Performance reports with page switching and enlarged image views.
 - **Approach:** Discovery, data review and scoping, build and validation, and handoff.
 - **Experience:** Business intelligence/reporting and operational auditing background.
 - **Tools:** Power BI, DAX, Power Query, SQL, Excel, SAP Analytics Cloud, Tableau, Power Automate, Power Apps, SharePoint, and Salesforce.
-- **Contact:** Email and professional profile links for project inquiries.
+- **Contact:** Email, LinkedIn, GitHub, and resume links, with a discovery-call inquiry CTA.
 
 ## Technology
 
@@ -27,7 +28,7 @@ The site is designed to help prospective employers and freelance clients underst
 - Google Fonts: Manrope and DM Sans
 - GitHub Pages for hosting
 
-No JavaScript framework, package manager, or build step is required.
+No JavaScript framework, package manager, or build step is required. The project dashboard previews are local SVG illustrations.
 
 ## Repository structure
 
@@ -54,6 +55,9 @@ No JavaScript framework, package manager, or build step is required.
 │   ├── apple-touch-icon.png
 │   ├── og-image.png
 │   └── projects/
+│       ├── bpo-operations-demo.svg
+│       ├── ecommerce-business-demo.svg
+│       ├── logistics-performance-demo.svg
 │       ├── hr-analytics-preview.png
 │       ├── hr-analytics-details.png
 │       ├── hr-analytics-actions.png
@@ -91,7 +95,7 @@ Then open `http://localhost:8000`.
 ## Before publishing changes
 
 - Verify job titles, dates, skills, and project descriptions.
-- Confirm all project screenshots and sample data are approved for public display.
+- The three new dashboard concepts use explicitly fictional demonstration data. Confirm any older report sample screenshots are approved for public display.
 - Do not publish confidential employer/client data or private dashboard links.
 - Describe demonstration projects as examples; do not imply that sample data represents verified client outcomes.
 - Check the email link, LinkedIn link, resume PDF, project images, navigation, and mobile menu.
