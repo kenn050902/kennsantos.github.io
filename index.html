@@ -45,6 +45,13 @@
     .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}.project-card{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 32px rgba(34,71,59,.07)}.project-card:first-child{grid-column:1/-1;display:grid;grid-template-columns:1.1fr .9fr}.project-copy{padding:1.5rem}.project-copy h3{font-size:1.35rem}.project-copy p{font-size:.9rem}.project-copy .kicker{font-size:.67rem}.project-preview{width:100%;height:100%;min-height:250px;object-fit:cover;object-position:top center;background:#e7eee8}.project-card:first-child .project-preview{min-height:100%}.demo-label{display:inline-flex;align-items:center;gap:.45rem;margin-bottom:1rem;padding:.38rem .62rem;border:1px solid #b9d9ca;border-radius:99px;background:#eff8f2;color:#24624e;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}.demo-label:before{content:"";width:6px;height:6px;border-radius:50%;background:#3e9b70}.project-meta{display:grid;gap:.85rem;margin-top:1.05rem}.project-meta strong{display:block;margin-bottom:.15rem;color:var(--text);font:700 .78rem Manrope}.project-meta span{color:var(--muted);font-size:.8rem;line-height:1.55}.project-meta .insight{padding:.7rem .8rem;border-left:3px solid #087c6b;background:#f1f7f2;border-radius:0 9px 9px 0}.project-kpis{display:flex;flex-wrap:wrap;gap:.38rem}.project-kpis span{padding:.28rem .48rem;border:1px solid var(--line);border-radius:7px;background:#fbfcfa;font-size:.7rem;color:var(--muted)}.service{min-height:205px}.service h3{font-size:1.08rem}.hero-copy{max-width:740px}.consulting-note{margin-top:.6rem;color:#d4e7dc;font-size:.78rem}.about{max-width:920px}
     .project-card:first-child .project-preview{object-fit:contain}
     @media(max-width:800px){.project-card:first-child{grid-column:auto;display:flex;flex-direction:column}.project-card:first-child .project-preview{height:auto;min-height:0;object-fit:cover}.project-grid{grid-template-columns:1fr}}
+    /* Keep the full dashboard canvas visible instead of zoom-cropping its labels and KPIs. */
+    .project-card .project-preview{display:block;width:100%;height:auto;aspect-ratio:920/390;min-height:0;object-fit:contain;object-position:center;background:#edf4ef}
+    .project-card:first-child .project-preview{min-height:0;align-self:center}
+    @media(max-width:800px){.project-card:first-child .project-preview{height:auto;min-height:0;object-fit:contain}}
+    .project-grid{grid-template-columns:1fr}
+    .project-card:first-child{grid-column:auto;display:block}
+    @media(max-width:800px){.project-card:first-child{display:block}}
   </style>
 </head>
 <body>
